@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sv"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lägga till ny kurs</title>
+    <script>
+      var exports = { __esModule: true };
+    </script>
+    <link rel="stylesheet" href="./style.css" />
+  <header>
+    <nav class="navbar" id="navbar">
+      <button class="hamburger" id="hamburger-toggle"> 
+        <div class="icon-open">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#755d40" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 6l16 0" />
+            <path d="M4 12l16 0" />
+            <path d="M4 18l16 0" />
+          </svg>
+        </div>
+        <div class="icon-close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#827053" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M18 6l-12 12" />
+            <path d="M6 6l12 12" />
+          </svg>
+        </div>
+      </button>
+      <ul class="navbar-items">
+
+        <li>
+          <a href="./index.html">Startsidan</a>
+        </li>
+        <li>
+          <a href="./add.html">Ny arbetserfarenhet</a>
+        </li>
+        <li>
+          <a href="./about.html">Om projektet</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <body onload="loadData()">
+    
+    <h1>Lägg till ny arbetslivserfarenhet</h1>
+    <form id="add-workexperience-form">
+        <label for="companyname">Företagsnamn:</label>
+        <input type="text" id="companyname" name="companyname">
+        <label for="jobtitle">Jobbtitel:</label>
+        <input type="text" id="jobtitle" name="jobtitle">
+        <label for="location">Plats:</label>
+        <input type="text" id="location" name="location">
+        <button type="submit">Lägg till</button>
+    </form>
+    <script src="./script.js"></script>
+  
+    <script type="module"  >  //js till hamburgar menyn
+        const hamburgerToggle = document.getElementById("hamburger-toggle");
+        const navbar = document.getElementById("navbar");
+    
+        function onHamburgerClick(){
+            if(navbar.classList.contains("open")){
+              navbar.classList.remove("open");
+     
+    
+            } else{
+              navbar.classList.add("open");
+    
+            }
+            
+          };
+        hamburgerToggle.addEventListener("click", onHamburgerClick);
+
+
+        
+      </script>
+      </body>
+    </html>
